@@ -51,7 +51,7 @@ COLOR_LOG = "COLOR_LOG" in os.environ
 PROMO_CODE = "SIMPLEISBETTER"
 
 # Server url
-URL = "localhost:5000"  # os.environ["URL"]
+URL = "http://privasedoc.com/:5000"  # os.environ["URL"]
 print(">>> URL:", URL)
 
 # Calculate RP_ID for WebAuthn
@@ -164,7 +164,7 @@ if "DKIM_PRIVATE_KEY_PATH" in os.environ:
 
 
 # Database
-DB_URI = "postgresql://postgres:admin@localhost:5432/simplelogin"  # os.environ["DB_URI"]
+DB_URI = "postgresql://postgres:admin@privasedoc.com:5432/simplelogin"  # os.environ["DB_URI"]
 
 # Flask secret
 FLASK_SECRET ="FLASK_SECRET_HERE"  # os.environ["FLASK_SECRET"]
