@@ -19,12 +19,12 @@ exclude = '''
 '''
 
 [tool.poetry]
-name = "SimpleLogin"
+name = "privacedoc"
 version = "0.1.0"
 description = "open-source email alias solution"
 authors = ["SimpleLogin <dev@simplelogin.io>"]
 license = "MIT"
-repository = "https://github.com/simple-login/app"
+repository = "https://github.com/SunnyBhagwat35/simplelogin"
 keywords = ["email", "alias", "privacy", "oauth2", "openid"]
 
 [tool.poetry.dependencies]
