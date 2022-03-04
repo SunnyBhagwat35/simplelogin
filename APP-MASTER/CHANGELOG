@@ -1,0 +1,127 @@
+# Changelog
+
+All notable changes to SimpleLogin will be documented in this file.
+The version corresponds to SimpleLogin Docker `image tag`.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [3.4.0] - 2021-04-06
+Support ARM arch
+Remove unused config like DEBUG, CLOUDWATCH, DKIM_PUBLIC_KEY_PATH, DKIM_DNS_VALUE
+Handle auto responder email
+Inform user when their alias has been transferred to another user
+Use alias transfer_token
+Improve logging
+Add /api/export/data, /api/export/aliases endpoints
+Take into account mailbox when importing/exporting aliases
+Multiple bug fixes
+Code refactoring
+Add ENABLE_SPAM_ASSASSIN config
+
+## [3.3.0] - 2021-03-05
+Notify user when reply cannot be sent
+User can choose default domain for random alias
+enable LOCAL_FILE_UPLOAD by default
+fix user has to login again after quitting the browser
+login user in api auth endpoints
+Create POST /api/api_key
+Add GET /api/logout
+Add setup-done page
+Add PublicDomain
+User can choose a random alias domain in a list of public domains
+User can choose mailboxes for a domain
+Return support_pgp in GET /api/v2/aliases
+Self hosting improvements
+Improve Search
+Use poetry instead of pip
+Add PATCH /api/user_info
+Add GET /api/setting
+Add GET /api/setting/domains
+Add PATCH /api/setting
+Add "Generic Subject" option
+Add /v2/setting/domains
+Add /api/v5/alias/options
+Add GET /api/custom_domains
+Add GET /api/custom_domains/:custom_domain_id/trash
+Able to disable a directory
+Use VERP: send email from bounce address
+Use VERP for transactional email: remove SENDER, SENDER_DIR
+Use "John Wick - john at wick.com" as default sender format
+Able to transfer an alias
+
+## [3.2.2] - 2020-06-15
+Fix POST /v2/alias/custom/new when DISABLE_ALIAS_SUFFIX is set
+
+## [3.2.1] - 2020-06-15
+Fix regressions introduced in 3.2.0 regarding DISABLE_ALIAS_SUFFIX option
+
+## [3.2.0] - 2020-06-10
+Make FIDO available
+Fix "remove the reverse-alias" when replying
+Update GET /mailboxes
+Create POST /api/v3/alias/custom/new
+Add PGP for contact
+
+## [3.1.1] - 2020-05-27
+Fix alias creation
+
+## [3.1.0] - 2020-05-09
+Remove social login signup
+More simple UI with advanced options hidden by default
+Use pagination for alias page
+Use Ajax for alias note and mailbox update
+Alias can have a name
+Global stats
+DMARC support for custom domain
+Enforce SPF
+FIDO support (beta)
+Able to disable onboarding emails
+
+
+## [3.0.1] - 2020-04-13
+Fix compatibility with 2x version
+Fix "Content-Transfer-Encoding" issue https://github.com/simple-login/app/issues/125
+
+## [3.0.0] - 2020-04-13
+New endpoints to create/update aliases:
+    PUT /api/aliases/:alias_id
+    GET /api/aliases/:alias_id/contacts
+    POST /api/aliases/:alias_id/contacts
+    GET /api/v2/aliases
+(Optional) Spam detection by Spamassassin
+Handling for bounced emails
+Support Multiple recipients (in To and Cc headers)
+
+## [2.1.0] - 2020-03-23
+Support PGP
+
+## [2.0.0] - 2020-03-13
+Support multiple Mailboxes
+Take into account Sender header
+
+## [1.0.5] - 2020-02-24
+Improve email forwarding.
+Minor improvements on monitoring.
+
+## [1.0.4] - 2020-02-09
+Fix duplicate "List-Unsubscribe"  email header.
+
+## [1.0.3] - 2020-01-28
+
+Add DISABLE_REGISTRATION param to disable new registrations.
+
+## [1.0.2] - 2020-01-28
+
+Add SUPPORT_NAME param to set a support email name.
+
+## [1.0.1] - 2020-01-28
+
+Simplify config file. 
+
+## [1.0.0] - 2020-01-22
+
+Start tagging docker image.
+Docker image tag is used in README to make sure SimpleLogin new Docker images don't break previous deployments.
+
+

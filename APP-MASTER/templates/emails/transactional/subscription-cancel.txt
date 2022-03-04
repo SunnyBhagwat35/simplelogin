@@ -1,0 +1,9 @@
+{% extends "base.txt.jinja2" %}
+
+{% block content %}
+
+Your subscription will end at {{end_date}}.
+
+Thanks for giving SimpleLogin a try!
+
+{% endblock %}
